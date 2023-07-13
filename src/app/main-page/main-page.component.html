@@ -1,0 +1,61 @@
+<body>
+    <div class="container" >
+        <span class="main-text">Rejestracja</span>
+        <form (ngSubmit)="registerUserAccount()" #form="ngForm">
+            <label class="name-label">
+                <span class="name">Imię: </span>
+                <input class="input" type="text" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ\s]+"
+                    maxlength="20" required [(ngModel)]="user.firstName" name="firstName" />
+
+                <div *ngIf="form.submitted && form.controls['firstName'].invalid" class="error-message">
+                    Wprowadź imię
+                </div>
+            </label>
+
+            <label class="last-name-label">
+                <span class="last-name">Nazwisko: </span>
+                <input class="input" type="text" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ\s]+" maxlength="30" required
+                    [(ngModel)]="user.lastName" name="lastName" />
+                <div *ngIf="form.submitted && form.controls['lastName'].invalid" class="error-message">
+                    Wprowadź nazwisko
+                </div>
+            </label>
+            <label class="adress-city-label">
+                <span class="last-name">Miasto zamieszkania: </span>
+                <input class="input" type="text" maxlength="20" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ\s]+" required
+                    [(ngModel)]="user.cityName" name="cityName" />
+                <div *ngIf="form.submitted && form.controls['cityName'].invalid" class="error-message">
+                    Wprowadź miasto zamieszkania
+                </div>
+            </label>
+            <label class="adress-label">
+                <span class="last-name">Adres zamieszkania: </span>
+                <input class="input" type="text" maxlength="50" required [(ngModel)]="user.adress" name="adress" />
+                <div *ngIf="form.submitted && form.controls['adress'].invalid" class="error-message">
+                    Wprowadź adres zamieszkania
+                </div>
+            </label>
+            <label class="adress-email-label">
+                <span class="last-name">Adres e-mail: </span>
+                <input class="input" type="text" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="user.email" name="email" />
+                <div *ngIf="form.submitted && form.controls['email'].invalid" class="error-message">
+                    Wprowadź poprawny adres email
+                </div>
+            </label>
+            <label class="number-label">
+                <span class="last-name">Numer telefonu: </span>
+                <input class="input" type="text" maxlength="9" required pattern="[0-9]{9}"
+                    [(ngModel)]="user.phoneNumber" name="phoneNumber" />
+                <div *ngIf="form.submitted && form.controls['phoneNumber'].invalid" class="error-message">
+                    Wprowadź poprawny numer telefonu
+                </div>
+            </label>
+            <button type="submit" (click)="send()" class="btn btn-secondary registrybtn" [disabled]="form.invalid">
+                Zarejestruj
+            </button>
+            <a href="https://www.example.com" class="log-in">Zaloguj się!</a>
+            
+        </form>
+    </div>
+</body>

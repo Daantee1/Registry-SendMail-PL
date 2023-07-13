@@ -1,0 +1,36 @@
+body{
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f0eeee, #fff);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+.footer{
+    position: relative;
+    top: 96%;
+    text-align: center;
+
+
+}
+.container{
+    background:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(187, 187, 187) );
+    width: 100vw;
+    height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+      text-align: center;
+      font-size: 8px;
+      
+    }
+  }
+
+  @media (max-width: 1800px) {
+    .footer {
+      text-align: center;
+    }
+  }

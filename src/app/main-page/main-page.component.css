@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.main-text {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    text-align: center;
+    font-size: 37px;
+    text-transform: uppercase;
+
+}
+
+.main-text:before,
+.main-text::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.name-label {
+    display: flex;
+    position: absolute;
+    top: 10rem;
+    left: 33%;
+
+    align-items: center;
+}
+
+.name {
+    text-align: center;
+    margin-right: 2rem;
+    font-size: larger;
+
+}
+
+.last-name-label {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 15rem;
+    left: 33%;
+
+
+}
+
+.last-name {
+    text-align: center;
+    margin-right: 2rem;
+    font-size: larger;
+
+}
+
+.adress-city-label {
+    display: flex;
+    position: absolute;
+    top: 20rem;
+    left: 33%;
+
+    align-items: center;
+}
+
+.adress-label {
+    display: flex;
+    position: absolute;
+    top: 25rem;
+    left: 33%;
+
+    align-items: center;
+}
+
+.adress-email-label {
+    display: flex;
+    position: absolute;
+    top: 30rem;
+    left: 33%;
+
+    align-items: center;
+}
+
+.number-label {
+    display: flex;
+    position: absolute;
+    top: 35rem;
+    left: 33%;
+
+    align-items: center;
+}
+
+.input {
+    position: absolute;
+    left: 14rem;
+}
+
+.registrybtn {
+    display: flex;
+    position: absolute;
+    top: 39rem;
+    left: 60%;
+}
+
+
+.error-message {
+    position: absolute;
+    display: inline;
+    white-space: nowrap;
+    top: 2.2rem;
+    left: 14rem;
+    color: red;
+    font-size: 12px;
+}
+
+.log-in{
+    position: absolute;
+    top: 39.5rem;
+    left: 48%;
+    color: rgb(95, 95, 220);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+    .log-in{
+        position: absolute;
+        font-size: 10px;
+        top: 18.3rem;
+        left: 18rem;
+    }
+    .main-text {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .main-text:before,
+    .main-text::after {
+        font-size: 5px;
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 2px;
+        background-color: #333;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+    .name-label {
+        top: 6rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .last-name-label {
+        top: 8rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .adress-city-label {
+        top: 10rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .adress-label {
+        top: 12rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .adress-email-label {
+        top: 14rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .number-label {
+        top: 16rem;
+        font-size: 13px;
+        left: 8rem;
+    }
+
+    .registrybtn {
+        top: 18rem;
+        font-size: 8px;
+        left: 23rem;
+    }
+
+    .input {
+        left: 11rem;
+        height: 1rem;
+        width: 8rem;
+    }
+    .error-message{
+        font-size: 7px;;
+        top: 1.2rem;
+        left: 11rem;
+    }
+}
